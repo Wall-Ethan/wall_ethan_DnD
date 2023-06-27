@@ -30,6 +30,12 @@ function handleDrop(e) {
     console.log("dropped something on me");
     //this line moves the dragged piece from the left side of the board
     //into whatever dropzone we choose.
+    const existingPiece = this.querySelector("img");
+
+    if (existingPiece){
+        console.log("connot drop here.");return;
+    }
+
     this.appendChild(draggedPiece);
 }
 
